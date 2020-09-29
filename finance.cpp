@@ -1,22 +1,24 @@
 /*
-Name : finance in C
+Name : finance in C++
 Author : Аїӡек Меѥҏ
 Version : v1.0
 License : N/A
 */
 
+#include <iostream>
 #include <stdio.h>
-#include <math.h>
+#include <cmath>
+using namespace std;
 
 void input(float *p, float *r, float *t, int *n)
 {
-  printf("Principal: ");
+  cout << "Principal: ";
   scanf("%f", p);
-  printf("Rate: ");
+  cout << "Rate: ";
   scanf("%f", r);
-  printf("Length (in Years): ");
+  cout << "Length (in Years): ";
   scanf("%f", t);
-  printf("Times per year: ");
+  cout << "Times per year: ";
   scanf("%d", n);
 }
 
@@ -34,6 +36,6 @@ int main()
   float *year = &iYear;
   int *times = &iTimes;
   input(principal, rate, year, times);
-  printf("Interest: %.2f\n", calculate(principal, rate, year, times));
+  cout << "Interest: " << calculate(principal, rate, year, times) << endl;
 }
 
